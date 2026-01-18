@@ -17,7 +17,7 @@ def extract_claims(text: str) -> str:
         llm = ChatGoogleGenerativeAI(
             model="models/gemini-2.5-flash",
             temperature=0,
-            api_key=os.getenv("GOOGLE_API_KEY"),
+            api_key=os.getenv("GEMINI_API_KEY"),
         )
 
         prompt = ChatPromptTemplate.from_template("""
@@ -55,3 +55,4 @@ TEXT:
     except Exception as e:
         print("[CLAIM_EXTRACTOR FALLBACK]", e)
         return json.dumps([])
+
