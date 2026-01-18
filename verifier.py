@@ -11,7 +11,7 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 
 SERPER_API_KEY = os.getenv("SERPER_API_KEY")
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 
 def serper_search(query: str):
     if not SERPER_API_KEY:
@@ -96,3 +96,4 @@ JSON FORMAT:
             "status": "Unknown",
             "explanation": "Verification failed due to API limits or invalid model output."
         }
+
